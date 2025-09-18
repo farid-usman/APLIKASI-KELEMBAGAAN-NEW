@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 16, 2025 at 09:33 AM
+-- Generation Time: Sep 18, 2025 at 08:40 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -40,7 +40,7 @@ CREATE TABLE `ma` (
   `kec_ma` varchar(100) DEFAULT NULL,
   `kepsek_ma` varchar(100) DEFAULT NULL,
   `nohp_ma` varchar(20) DEFAULT NULL,
-  `agenda2025` varchar(100) DEFAULT NULL
+  `agenda2025` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -48,8 +48,8 @@ CREATE TABLE `ma` (
 --
 
 INSERT INTO `ma` (`id`, `no`, `nsm_ma`, `npsn_ma`, `pegid_ma`, `tahunberdiri_ma`, `nm_ma`, `jenis_ma`, `tipe_ma`, `kec_ma`, `kepsek_ma`, `nohp_ma`, `agenda2025`) VALUES
-(1, 1, '131133150001', '20362915', '20314274', 1978, 'MAN 1 GROBOGAN', 'Madrasah Aliyah', 'negeri', 'PURWODADI', 'ALIFAH', '81328592596', NULL),
-(2, 2, '131133150012', '60728101', '20363917', 2009, 'MAN 2 GROBOGAN', 'Madrasah Aliyah', 'negeri', 'GUBUG', 'NURKHOLIS, M. Pd.', '85727676334', NULL),
+(1, 1, '131133150001', '20362915', '20314274', 1978, 'MAN 1 GROBOGAN', 'Madrasah Aliyah', 'negeri', 'PURWODADI', 'ALIFAH', '81328592596', ''),
+(2, 2, '131133150012', '60728101', '20363917', 2009, 'MAN 2 GROBOGAN', 'Madrasah Aliyah', 'negeri', 'GUBUG', 'NURKHOLIS, M. Pd.', '85727676334', ''),
 (3, 3, '131233150002', '20362920', '20314245', 1978, 'MAS SUNNIYYAH', 'Madrasah Aliyah', 'swasta', 'TAWANGHARJO', 'CHOERUR ROSAD', '85229682260', NULL),
 (4, 4, '131233150003', '20362916', '20314252', 1978, 'MAS DARUT TAQWA', 'Madrasah Aliyah', 'swasta', 'PURWODADI', 'Agus Ahmad Ghufron', '89560211', NULL),
 (5, 5, '131233150004', '20362918', '20314244', 1986, 'MAS TAJUL ULUM BRABO', 'Madrasah Aliyah', 'swasta', 'TANGGUNGHARJO', 'TOFIKHUL HIDAYAT', '81391216538', NULL),
@@ -118,7 +118,7 @@ CREATE TABLE `mi` (
   `kec_mi` varchar(100) DEFAULT NULL,
   `kepsek_mi` varchar(100) DEFAULT NULL,
   `nohp_mi` varchar(20) DEFAULT NULL,
-  `agenda2025` varchar(100) DEFAULT NULL
+  `agenda2025` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -126,14 +126,14 @@ CREATE TABLE `mi` (
 --
 
 INSERT INTO `mi` (`id`, `no`, `nsm_mi`, `npsn_mi`, `pegid_mi`, `tahunberdiri_mi`, `nm_mi`, `jenis_mi`, `tipe_mi`, `kec_mi`, `kepsek_mi`, `nohp_mi`, `agenda2025`) VALUES
-(1, 1, '111133150036', '60712020', '20314269', 1995, 'MIN 2 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'WIROSARI', 'NURHAMID', '85870478565', NULL),
-(2, 2, '111133150061', '60711957', '20314270', 1997, 'MIN 3 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'GODONG', 'Mutma\'innah', '85225800485', NULL),
-(3, 3, '111133150066', '60711970', '20314271', 1985, 'MIN 1 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'GUBUG', 'JUMARI', '81326140889', NULL),
+(1, 1, '111133150036', '60712020', '20314269', 1995, 'MIN 2 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'WIROSARI', 'NURHAMID', '85870478565', ''),
+(2, 2, '111133150061', '60711957', '20314270', 1997, 'MIN 3 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'GODONG', 'Mutma\'innah', '85225800485', ''),
+(3, 3, '111133150066', '60711970', '20314271', 1985, 'MIN 1 GROBOGAN', 'Madrasah Ibtidaiyah', 'negeri', 'GUBUG', 'JUMARI', '81326140889', ''),
 (4, 56, '111233150055', '60711948', '20314316', 1978, 'MIS TARBIYATUL ATHFAL', 'Madrasah Ibtidaiyah', 'swasta', 'BRATI', 'ALI MARSUDI', '81326614361', NULL),
-(5, 4, '111233150001', '60711979', '20314213', 1978, 'MIS MANBAUL ULUM', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'SUMAIRAH', '85227439245', NULL),
-(6, 5, '111233150002', '60711980', '20314236', 1968, 'MIS MIFTAHUL ULUM KENTENGSARI', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MUKAZIN, S.Pd.I', '81390569432', NULL),
-(7, 6, '111233150003', '60711981', '20314313', 1978, 'MIS TARBIYATUS SIBYAN', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MASLICHAN', '85740350004', NULL),
-(8, 7, '111233150004', '60711982', '20314208', 1955, 'MIS MIFTAHUL HUDA 1 KALIMARO', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MUHAMAD RIFAI', '85712999979', NULL),
+(5, 4, '111233150001', '60711979', '20314213', 1978, 'MIS MANBAUL ULUM', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'SUMAIRAH', '85227439245', ''),
+(6, 5, '111233150002', '60711980', '20314236', 1968, 'MIS MIFTAHUL ULUM KENTENGSARI', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MUKAZIN, S.Pd.I', '81390569432', ''),
+(7, 6, '111233150003', '60711981', '20314313', 1978, 'MIS TARBIYATUS SIBYAN', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MASLICHAN', '85740350004', ''),
+(8, 7, '111233150004', '60711982', '20314208', 1955, 'MIS MIFTAHUL HUDA 1 KALIMARO', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MUHAMAD RIFAI', '85712999979', ''),
 (9, 8, '111233150005', '60711983', '20314207', 1978, 'MIS MIFTAHUL HUDA 2 KALIMARO', 'Madrasah Ibtidaiyah', 'swasta', 'KEDUNGJATI', 'MUHAB ABIDIN', '85776557641', NULL),
 (10, 9, '111233150006', '60711974', '20314312', 1975, 'MIS TARBIYATUSSIBYAN', 'Madrasah Ibtidaiyah', 'swasta', 'KARANGRAYUNG', 'MUNAFI`AH', '85742619011', NULL),
 (11, 10, '111233150007', '60711975', '20337910', 1975, 'MIS MUHAMMADIYAH', 'Madrasah Ibtidaiyah', 'swasta', 'KARANGRAYUNG', 'HENNI HARYATI', '85225173852', NULL),
@@ -267,7 +267,7 @@ CREATE TABLE `mts` (
   `kec_mts` varchar(100) DEFAULT NULL,
   `kepsek_mts` varchar(100) DEFAULT NULL,
   `nohp_mts` varchar(20) DEFAULT NULL,
-  `agenda2025` varchar(100) DEFAULT NULL
+  `agenda2025` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -275,7 +275,7 @@ CREATE TABLE `mts` (
 --
 
 INSERT INTO `mts` (`id`, `no`, `nsm_mts`, `npsn_mts`, `jenis_mts`, `pegid_mts`, `tahunberdiri_mts`, `nm_mts`, `tipe_mts`, `kec_mts`, `kepsek_mts`, `nohp_mts`, `agenda2025`) VALUES
-(1, 1, '121133150008', '20363904', 'Madrasah Tsanawiyah', '20314332', 2009, 'MTSN 3 GROBOGAN', 'negeri', 'PENAWANGAN', 'NUR HADI', '81328592596', NULL),
+(1, 1, '121133150008', '20363904', 'Madrasah Tsanawiyah', '20314332', 2009, 'MTSN 3 GROBOGAN', 'negeri', 'PENAWANGAN', 'NUR HADI', '81328592596', ''),
 (2, 2, '121133150034', '20363945', 'Madrasah Tsanawiyah', '20314338', 1997, 'MTSN 2 GROBOGAN', 'negeri', 'WIROSARI', 'ROIS SHOLIKHUDIN', '85786810631', NULL),
 (3, 3, '121133150062', '20363885', 'Madrasah Tsanawiyah', '20314339', 1993, 'MTSN 1 GROBOGAN', 'negeri', 'GUBUG', 'SUDARMANTO', '81326780040', NULL),
 (4, 4, '121233150001', '20363893', 'Madrasah Tsanawiyah', '20314133', 1986, 'MTSS YASIN WATES', 'swasta', 'KEDUNGJATI', 'ABDUL HARISH', '85640585745', NULL),
